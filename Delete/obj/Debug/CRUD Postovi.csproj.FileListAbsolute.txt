@@ -1,0 +1,21 @@
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\bin\Debug\Delete.exe.config
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\bin\Debug\Delete.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\bin\Debug\Delete.pdb
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\DeletePostFull.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\InsertPosta.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\UpdatePost.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\App.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\Delete_MarkupCompile.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\Delete_MarkupCompile.lref
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\DeletePostFull.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\InsertPosta.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\UpdatePost.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\Delete.g.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\Delete.Properties.Resources.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\CRUD Postovi.csproj.GenerateResource.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\CRUD Postovi.csproj.CoreCompileInputs.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\Delete.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\Delete.pdb
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\CRUD Postovi.csprojAssemblyReference.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\UpravljanjeKategorijamaxaml.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Delete\obj\Debug\UpravljanjeKategorijamaxaml.baml

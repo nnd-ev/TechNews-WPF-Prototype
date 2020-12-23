@@ -1,0 +1,21 @@
+﻿<Window x:Class="Insertovanja.Prijava"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Insertovanja"
+        mc:Ignorable="d"
+        Title="Prijava" Height="234.885" Width="304.811">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Margin="44,33,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sifra" VerticalAlignment="Top" Margin="47,79,0,0"/>
+
+
+
+        <TextBox Name="tbEmail" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="124,32,0,0"/>
+        <TextBox Name="tbSifra" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="124,77,0,0"/>
+        <Button x:Name="btnPrijava" Content="Prijava" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="47,132,0,0" Height="32" Click="BtnPrijava_Click"  />
+        <Button x:Name="btnRegistracija" Content="Regijstracija" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="172,132,0,0" Height="32" Click="BtnRegistracija_Click"  />
+
+    </Grid>
+</Window>

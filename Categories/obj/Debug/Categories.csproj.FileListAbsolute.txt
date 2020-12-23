@@ -1,0 +1,15 @@
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories.csprojAssemblyReference.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\MainWindow.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\App.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories_MarkupCompile.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories_MarkupCompile.lref
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\bin\Debug\Categories.exe.config
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\bin\Debug\Categories.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\bin\Debug\Categories.pdb
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\MainWindow.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories.g.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories.Properties.Resources.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories.csproj.GenerateResource.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories.csproj.CoreCompileInputs.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Categories\obj\Debug\Categories.pdb

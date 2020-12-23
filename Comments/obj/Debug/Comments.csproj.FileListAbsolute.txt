@@ -1,0 +1,15 @@
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\bin\Debug\Comments.exe.config
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\bin\Debug\Comments.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\bin\Debug\Comments.pdb
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments.csprojAssemblyReference.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\MainWindow.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\App.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments_MarkupCompile.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments_MarkupCompile.lref
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\MainWindow.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments.g.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments.Properties.Resources.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments.csproj.GenerateResource.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments.csproj.CoreCompileInputs.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\Comments\obj\Debug\Comments.pdb

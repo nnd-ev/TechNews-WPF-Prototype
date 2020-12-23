@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.875" name="Korisnici">
+  <DataContextMoniker Name="/KorisniciDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d91bc8db-4836-49ee-90f4-bb8f227a0641" absoluteBounds="3.5, 3.125, 2, 1.3862939453125009">
+      <DataClassMoniker Name="/KorisniciDataContext/Bookmark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cac3da04-6a0a-4a89-b9a0-02f6b3234afe" absoluteBounds="3.515, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9efe6ce5-2f26-43cd-8e1c-dc0dec1565b2" absoluteBounds="3.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/KorisniciDataContext/Kategorija" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb371d13-bd3f-4600-8812-1f50258d74b0" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52b44535-30ed-48f9-bd5d-aeba73743512" absoluteBounds="3.5, 7.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/KorisniciDataContext/Komentar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d61cdbf9-dff4-42ab-9f02-39d13d8ca038" absoluteBounds="3.515, 8.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a41f3069-739e-4fce-b5ed-6c2245cdeeca" absoluteBounds="0.75, 5.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/KorisniciDataContext/Korisnik" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a30f8bab-bf67-4144-bcbf-fe7ae339a686" absoluteBounds="0.765, 5.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63a8fb99-275a-4367-8b35-4ea3f33b9bcb" absoluteBounds="3.5, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/KorisniciDataContext/Ocena" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52c1ff7e-8fec-468e-9f2d-9c2f3c01a9ad" absoluteBounds="3.515, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55e7a3a1-35d4-48d2-b918-586c870310d3" absoluteBounds="6.5, 5.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/KorisniciDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1d9ac70-2840-4efa-bab5-041cf7031ef9" absoluteBounds="6.515, 5.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 5.125); (1.75 : 3.81814697265625); (3.5 : 3.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KorisniciDataContext/Korisnik/Korisnik_Bookmark" />
+      <nodes>
+        <classShapeMoniker Id="a41f3069-739e-4fce-b5ed-6c2245cdeeca" />
+        <classShapeMoniker Id="d91bc8db-4836-49ee-90f4-bb8f227a0641" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 7.47280110677083); (1.75 : 8.60659912109375); (3.5 : 8.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KorisniciDataContext/Korisnik/Korisnik_Komentar" />
+      <nodes>
+        <classShapeMoniker Id="a41f3069-739e-4fce-b5ed-6c2245cdeeca" />
+        <classShapeMoniker Id="52b44535-30ed-48f9-bd5d-aeba73743512" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.03929768880208); (3.5 : 6.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KorisniciDataContext/Korisnik/Korisnik_Ocena" />
+      <nodes>
+        <classShapeMoniker Id="a41f3069-739e-4fce-b5ed-6c2245cdeeca" />
+        <classShapeMoniker Id="63a8fb99-275a-4367-8b35-4ea3f33b9bcb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 1.94399251302083); (5.65625 : 7.1819482421875); (6.5 : 7.1819482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KorisniciDataContext/Kategorija/Kategorija_Post" />
+      <nodes>
+        <classShapeMoniker Id="9efe6ce5-2f26-43cd-8e1c-dc0dec1565b2" />
+        <classShapeMoniker Id="55e7a3a1-35d4-48d2-b918-586c870310d3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.97402180989583); (5.57291666666667 : 6.97402180989583 : JumpStart); (5.73958333333333 : 6.97402180989583 : JumpEnd); (6.5 : 6.97402180989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KorisniciDataContext/Korisnik/Korisnik_Post" />
+      <nodes>
+        <classShapeMoniker Id="a41f3069-739e-4fce-b5ed-6c2245cdeeca" />
+        <classShapeMoniker Id="55e7a3a1-35d4-48d2-b918-586c870310d3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

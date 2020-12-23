@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.875" name="Postovi">
+  <DataContextMoniker Name="/PostoviDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ae157a80-c6d3-4ed5-a7f7-06d1fdf08540" absoluteBounds="3.5, 3.125, 2, 1.3862939453125009">
+      <DataClassMoniker Name="/PostoviDataContext/Bookmark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c35c8a2-d82a-46bd-867f-238060e493ce" absoluteBounds="3.515, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83e733fe-b010-486f-972e-3f38e29e106a" absoluteBounds="3.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/PostoviDataContext/Kategorija" />
+      <nestedChildShapes>
+        <elementListCompartment Id="909af3cc-ab47-40c0-8f14-4ba00f76d3cf" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7074dab7-af6b-4913-a61f-4f4105fec9a4" absoluteBounds="3.5, 7.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/PostoviDataContext/Komentar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2dfa5b85-3955-4940-9626-205f9a55c0bc" absoluteBounds="3.515, 8.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d29ce8c-5dfe-4d9c-823d-f9180b0f4c10" absoluteBounds="0.75, 5.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/PostoviDataContext/Korisnik" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2450a577-36ee-4804-8cd7-dd0cc358c94b" absoluteBounds="0.765, 5.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbda82f5-c2d8-45a2-9e64-83db9a5d018f" absoluteBounds="3.5, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PostoviDataContext/Ocena" />
+      <nestedChildShapes>
+        <elementListCompartment Id="097ae859-b61d-4ad2-a166-45d36dd640dc" absoluteBounds="3.515, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ceba498-886b-4463-b646-f62cac5482eb" absoluteBounds="6.5, 5.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/PostoviDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e2faa22-6c65-431f-947e-c6cf38c2a26f" absoluteBounds="6.515, 5.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 5.125); (1.75 : 3.81814697265625); (3.5 : 3.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PostoviDataContext/Korisnik/Korisnik_Bookmark" />
+      <nodes>
+        <classShapeMoniker Id="3d29ce8c-5dfe-4d9c-823d-f9180b0f4c10" />
+        <classShapeMoniker Id="ae157a80-c6d3-4ed5-a7f7-06d1fdf08540" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 7.47280110677083); (1.75 : 8.60659912109375); (3.5 : 8.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PostoviDataContext/Korisnik/Korisnik_Komentar" />
+      <nodes>
+        <classShapeMoniker Id="3d29ce8c-5dfe-4d9c-823d-f9180b0f4c10" />
+        <classShapeMoniker Id="7074dab7-af6b-4913-a61f-4f4105fec9a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.03929768880208); (3.5 : 6.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PostoviDataContext/Korisnik/Korisnik_Ocena" />
+      <nodes>
+        <classShapeMoniker Id="3d29ce8c-5dfe-4d9c-823d-f9180b0f4c10" />
+        <classShapeMoniker Id="dbda82f5-c2d8-45a2-9e64-83db9a5d018f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 1.94399251302083); (5.65625 : 7.1819482421875); (6.5 : 7.1819482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PostoviDataContext/Kategorija/Kategorija_Post" />
+      <nodes>
+        <classShapeMoniker Id="83e733fe-b010-486f-972e-3f38e29e106a" />
+        <classShapeMoniker Id="2ceba498-886b-4463-b646-f62cac5482eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.97402180989583); (5.57291666666667 : 6.97402180989583 : JumpStart); (5.73958333333333 : 6.97402180989583 : JumpEnd); (6.5 : 6.97402180989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PostoviDataContext/Korisnik/Korisnik_Post" />
+      <nodes>
+        <classShapeMoniker Id="3d29ce8c-5dfe-4d9c-823d-f9180b0f4c10" />
+        <classShapeMoniker Id="2ceba498-886b-4463-b646-f62cac5482eb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
