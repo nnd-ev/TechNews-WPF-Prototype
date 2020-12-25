@@ -1,0 +1,18 @@
+﻿<Window x:Class="ObicanKorisnik.InsertKomentar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ObicanKorisnik"
+        mc:Ignorable="d"
+        Title="Komentar" Height="348.667" Width="559.467">
+    <Grid>
+        <RichTextBox Name="tbSadrzaj" HorizontalAlignment="Left" Height="204" VerticalAlignment="Top" Width="498" Margin="24,37,0,0">
+
+        </RichTextBox>
+        <Button Name="btnDodaj" Content="Dodaj Komentar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="25,265,0,0" Height="28" Click="BtnDodaj_Click"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unesite komentar" VerticalAlignment="Top" Margin="25,12,0,0"/>
+        <TextBox Name="tbPostID" Visibility="Hidden" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

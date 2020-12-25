@@ -1,0 +1,34 @@
+﻿<Window x:Class="Comments.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comments"
+        mc:Ignorable="d"
+        Title="Upravljanje Komentarima" Height="357.499" Width="791.27">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Komentari" VerticalAlignment="Top" Margin="48,26,0,0"/>
+        <DataGrid Name="glavniGrid" HorizontalAlignment="Center" Height="213" VerticalAlignment="Top" AutoGenerateColumns="False" Width="685" Margin="48,53,51.8,0" HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Naslov}" Width="180"  Header="Post" />
+                <DataGridTextColumn Binding="{Binding Sadrzaj}" Width="300"  Header="Sadrzaj"/>
+
+                <DataGridTemplateColumn Header="Odobri" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btnOdobri" Content="Odobri"   HorizontalAlignment="Center"  Width="100" Click="BtnIzmeni_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Obrisi" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <Button Name="btnOdobri" Content="Obrisi" HorizontalAlignment="Center" Click="BtnObrisi_Click"  Width="100" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

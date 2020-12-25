@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TechNews2" Class="CommentsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-GOGF2RU;Initial Catalog=TechNews2;Integrated Security=True" SettingsObjectName="Comments.Properties.Settings" SettingsPropertyName="TechNews2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bookmark" Member="Bookmarks">
+    <Type Name="Bookmark">
+      <Column Name="BookmarkID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KorisnikID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Korisnik_Bookmark" Member="Korisnik" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Korisnik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Post" Member="Posts">
+    <Type Name="Post">
+      <Column Name="PostID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KorisnikID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KategorijaID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Naslov" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sadrzaj" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Like_" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Dislike_" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Kategorija_Post" Member="Kategorija" ThisKey="KategorijaID" OtherKey="KategorijaID" Type="Kategorija" IsForeignKey="true" />
+      <Association Name="Korisnik_Post" Member="Korisnik" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Korisnik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kategorija" Member="Kategorijas">
+    <Type Name="Kategorija">
+      <Column Name="KategorijaID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NazivKategorije" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Kategorija_Post" Member="Posts" ThisKey="KategorijaID" OtherKey="KategorijaID" Type="Post" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Komentar" Member="Komentars">
+    <Type Name="Komentar">
+      <Column Name="KomentarID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KorisnikID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sadrzaj" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Allowed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Datum" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Korisnik_Komentar" Member="Korisnik" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Korisnik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Korisnik" Member="Korisniks">
+    <Type Name="Korisnik">
+      <Column Name="KorisnikID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prezime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pasword" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Datum" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Korisnik_Bookmark" Member="Bookmarks" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Bookmark" />
+      <Association Name="Korisnik_Post" Member="Posts" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Post" />
+      <Association Name="Korisnik_Komentar" Member="Komentars" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Komentar" />
+      <Association Name="Korisnik_Ocena" Member="Ocenas" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Ocena" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ocena" Member="Ocenas">
+    <Type Name="Ocena">
+      <Column Name="OcenaID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KorisnikID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ocena" Member="Ocena1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Korisnik_Ocena" Member="Korisnik" ThisKey="KorisnikID" OtherKey="KorisnikID" Type="Korisnik" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

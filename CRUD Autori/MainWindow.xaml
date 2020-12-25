@@ -1,0 +1,38 @@
+﻿<Window x:Class="CRUD_Autori.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRUD_Autori"
+        mc:Ignorable="d"
+        Title="Upravljanje Autorima" Height="316.4" Width="591.2">
+    <Grid Margin="29,0,0.4,1.6">
+        <DataGrid x:Name="glavniGrid" HorizontalAlignment="Center" Height="193" VerticalAlignment="Top" AutoGenerateColumns="False" Width="544" Margin="-1,75,12.4,0" HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Ime}" Width="140" Header="Ime"/>
+                <DataGridTextColumn Binding="{Binding Prezime}" Width="140" Header="Prezime"/>
+                <DataGridTextColumn Binding="{Binding Role}"  Width="160" Header="Role"/>
+
+                <DataGridTemplateColumn Header="Izmeni" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnObrisi" Content="Izmeni"   HorizontalAlignment="Center"  Width="100" Click="BtnIzmeni_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--<DataGridTemplateColumn Header="Obrisi" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <Button x:Name="btnOdobri" Content="Obrisi" HorizontalAlignment="Center" Click="BtnObrisi_Click"  Width="100" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Button x:Name="btnDodaj" Content="Novi Autor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Margin="1,33,0,0" Height="27" Click="BtnDodaj_Click"/>
+
+    </Grid>
+</Window>

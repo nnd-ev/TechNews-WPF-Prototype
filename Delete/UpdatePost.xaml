@@ -1,0 +1,32 @@
+﻿<Window x:Class="Delete.UpdatePost"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delete"
+        mc:Ignorable="d"
+        Title="Izmena Posta" Height="458.865" Width="409.203">
+    <Window.Resources>
+        <DataTemplate x:Key="Kategorije">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding NazivKategorije}" FontWeight="Bold"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Naslov" VerticalAlignment="Top" Margin="51,33,0,0" Height="19" Width="39"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kategorija" VerticalAlignment="Top" Margin="37,77,0,0" Height="19" Width="59"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sadrzaj" VerticalAlignment="Top" Margin="53,138,0,0" Height="19" Width="43"/>
+
+
+        <TextBox x:Name="tbNaslov" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap"   VerticalAlignment="Top" Width="165" Margin="117,29,0,0"/>
+        <Button x:Name="btnUpdate" Content="Izemni Post" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="51,313,0,0" Height="36" Click="btnUpdate_Click"  />
+        <Button x:Name="btnReset" Content="Odustani" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="181,313,0,0" Height="36" Click="BtnReset_Click"  />
+        <RichTextBox x:Name="tbSadrzaj" HorizontalAlignment="Left" Height="149" VerticalAlignment="Top" Width="161" Margin="119,133,0,0"/>
+        <ComboBox x:Name="cmbKategorija" ItemTemplate="{StaticResource ResourceKey=Kategorije}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Margin="118,76,0,0" Height="26"/>
+        <TextBox Name="tbPostID" Visibility="Hidden" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"   VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnNovaKat" Content="Izmena Kategorije" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Margin="292,76,0,0" Height="26" Click="BtnNovaKat_Click"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="Delete.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delete"
+        mc:Ignorable="d"
+        Title="Admin Panel - Postovi" Height="447.377" Width="734.041"> 
+    
+    <Grid Margin="0,0,40,-0.4"> 
+
+        <DataGrid Name="glavniGrid" HorizontalAlignment="Center" Height="299" VerticalAlignment="Top" AutoGenerateColumns="False" Width="664" Margin="25,74,0,0" HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Naslov}" Width="300" Header="Naslov" />
+                <DataGridTextColumn Binding="{Binding NazivKategorije}" Width="160" Header="Kategorija"/>
+
+                <DataGridTemplateColumn Header="Izmeni" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btnObrisi" Content="Izmeni"   HorizontalAlignment="Center"  Width="100" Click="BtnIzmeni_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Obrisi" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <Button Name="btnOdobri" Content="Obrisi" HorizontalAlignment="Center" Click="BtnObrisi_Click"  Width="100" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        
+        <Button Name="btnDodaj" Content="Dodaj Novi Post" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Margin="25,38,0,0" Height="27" Click="BtnDodaj_Click"/>
+    </Grid>
+</Window>

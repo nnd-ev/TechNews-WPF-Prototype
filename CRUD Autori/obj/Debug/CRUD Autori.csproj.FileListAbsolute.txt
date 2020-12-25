@@ -1,0 +1,19 @@
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\MainWindow.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\App.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori_MarkupCompile.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori_MarkupCompile.lref
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\bin\Debug\CRUD Autori.exe.config
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\bin\Debug\CRUD Autori.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\bin\Debug\CRUD Autori.pdb
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\MainWindow.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori.g.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD_Autori.Properties.Resources.resources
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori.csproj.GenerateResource.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori.csproj.CoreCompileInputs.cache
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori.exe
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori.pdb
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\InsertAutor.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\UpdateAutor.g.cs
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\InsertAutor.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\UpdateAutor.baml
+C:\Users\NNDST\Desktop\Fifth\PPP\Project\Third\FORMS-GUI\Insertovanja\CRUD Autori\obj\Debug\CRUD Autori.csprojAssemblyReference.cache

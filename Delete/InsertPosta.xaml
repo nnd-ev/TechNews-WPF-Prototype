@@ -1,0 +1,35 @@
+﻿<Window x:Class="Delete.InsertPosta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Delete"
+        mc:Ignorable="d"
+        Title="Novi Post" Height="372.803" Width="386.197">
+
+    <Window.Resources>
+        <DataTemplate x:Key="Kategorije">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding NazivKategorije}" FontWeight="Bold"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Naslov" VerticalAlignment="Top" Margin="50,33,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kategorija" VerticalAlignment="Top" Margin="37,71,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sadrzaj" VerticalAlignment="Top" Margin="52,125,0,0"/>
+
+
+        <TextBox x:Name="tbNaslov" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"   VerticalAlignment="Top" Width="139" Margin="121,29,0,0"/>
+        <Button x:Name="btnInsert" Content="Objavi Post" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="50,277,0,0" Height="32" Click="BtnInsert_Click"  />
+        <Button x:Name="btnReset" Content="Odustani" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="168,277,0,0" Height="32" Click="BtnReset_Click"  />
+        <RichTextBox Name="tbSadrzaj" HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="134" Margin="124,127,0,0">
+
+        </RichTextBox>
+        <ComboBox x:Name="cmbKategorija" ItemTemplate="{StaticResource Kategorije}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Margin="122,70,0,0" Height="23"/>
+        <Button Name="btnNovaKat" Content="Izmena Kategorije" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="273,72,0,0" Height="23" Click="BtnNovaKat_Click"/>
+
+
+    </Grid>
+</Window>
