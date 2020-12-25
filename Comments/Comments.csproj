@@ -75,11 +75,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Postovi.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Postovi.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -104,14 +99,6 @@
     </None>
     <None Include="Comments.dbml.layout">
       <DependentUpon>Comments.dbml</DependentUpon>
-    </None>
-    <None Include="Postovi.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Postovi.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Postovi.dbml.layout">
-      <DependentUpon>Postovi.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

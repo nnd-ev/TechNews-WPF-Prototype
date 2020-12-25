@@ -32,5 +32,15 @@ namespace Categories.Properties {
                 return ((string)(this["TechNewsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-GOGF2RU;Initial Catalog=TechNews2;Integrated Security=True")]
+        public string TechNews2ConnectionString {
+            get {
+                return ((string)(this["TechNews2ConnectionString"]));
+            }
+        }
     }
 }

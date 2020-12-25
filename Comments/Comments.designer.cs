@@ -33,6 +33,9 @@ namespace Comments
     partial void InsertBookmark(Bookmark instance);
     partial void UpdateBookmark(Bookmark instance);
     partial void DeleteBookmark(Bookmark instance);
+    partial void InsertPost(Post instance);
+    partial void UpdatePost(Post instance);
+    partial void DeletePost(Post instance);
     partial void InsertKategorija(Kategorija instance);
     partial void UpdateKategorija(Kategorija instance);
     partial void DeleteKategorija(Kategorija instance);
@@ -45,9 +48,6 @@ namespace Comments
     partial void InsertOcena(Ocena instance);
     partial void UpdateOcena(Ocena instance);
     partial void DeleteOcena(Ocena instance);
-    partial void InsertPost(Post instance);
-    partial void UpdatePost(Post instance);
-    partial void DeletePost(Post instance);
     #endregion
 		
 		public CommentsDataContext() : 
@@ -88,6 +88,14 @@ namespace Comments
 			}
 		}
 		
+		public System.Data.Linq.Table<Post> Posts
+		{
+			get
+			{
+				return this.GetTable<Post>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Kategorija> Kategorijas
 		{
 			get
@@ -117,14 +125,6 @@ namespace Comments
 			get
 			{
 				return this.GetTable<Ocena>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Post> Posts
-		{
-			get
-			{
-				return this.GetTable<Post>();
 			}
 		}
 	}
@@ -248,6 +248,318 @@ namespace Comments
 					if ((value != null))
 					{
 						value.Bookmarks.Add(this);
+						this._KorisnikID = value.KorisnikID;
+					}
+					else
+					{
+						this._KorisnikID = default(int);
+					}
+					this.SendPropertyChanged("Korisnik");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Post")]
+	public partial class Post : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PostID;
+		
+		private int _KorisnikID;
+		
+		private int _KategorijaID;
+		
+		private string _Naslov;
+		
+		private string _Sadrzaj;
+		
+		private System.Nullable<int> _Like_;
+		
+		private System.Nullable<int> _Dislike_;
+		
+		private System.DateTime _Datum;
+		
+		private EntityRef<Kategorija> _Kategorija;
+		
+		private EntityRef<Korisnik> _Korisnik;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPostIDChanging(int value);
+    partial void OnPostIDChanged();
+    partial void OnKorisnikIDChanging(int value);
+    partial void OnKorisnikIDChanged();
+    partial void OnKategorijaIDChanging(int value);
+    partial void OnKategorijaIDChanged();
+    partial void OnNaslovChanging(string value);
+    partial void OnNaslovChanged();
+    partial void OnSadrzajChanging(string value);
+    partial void OnSadrzajChanged();
+    partial void OnLike_Changing(System.Nullable<int> value);
+    partial void OnLike_Changed();
+    partial void OnDislike_Changing(System.Nullable<int> value);
+    partial void OnDislike_Changed();
+    partial void OnDatumChanging(System.DateTime value);
+    partial void OnDatumChanged();
+    #endregion
+		
+		public Post()
+		{
+			this._Kategorija = default(EntityRef<Kategorija>);
+			this._Korisnik = default(EntityRef<Korisnik>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int PostID
+		{
+			get
+			{
+				return this._PostID;
+			}
+			set
+			{
+				if ((this._PostID != value))
+				{
+					this.OnPostIDChanging(value);
+					this.SendPropertyChanging();
+					this._PostID = value;
+					this.SendPropertyChanged("PostID");
+					this.OnPostIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KorisnikID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int KorisnikID
+		{
+			get
+			{
+				return this._KorisnikID;
+			}
+			set
+			{
+				if ((this._KorisnikID != value))
+				{
+					if (this._Korisnik.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnKorisnikIDChanging(value);
+					this.SendPropertyChanging();
+					this._KorisnikID = value;
+					this.SendPropertyChanged("KorisnikID");
+					this.OnKorisnikIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KategorijaID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int KategorijaID
+		{
+			get
+			{
+				return this._KategorijaID;
+			}
+			set
+			{
+				if ((this._KategorijaID != value))
+				{
+					if (this._Kategorija.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnKategorijaIDChanging(value);
+					this.SendPropertyChanging();
+					this._KategorijaID = value;
+					this.SendPropertyChanged("KategorijaID");
+					this.OnKategorijaIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Naslov", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Naslov
+		{
+			get
+			{
+				return this._Naslov;
+			}
+			set
+			{
+				if ((this._Naslov != value))
+				{
+					this.OnNaslovChanging(value);
+					this.SendPropertyChanging();
+					this._Naslov = value;
+					this.SendPropertyChanged("Naslov");
+					this.OnNaslovChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sadrzaj", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Sadrzaj
+		{
+			get
+			{
+				return this._Sadrzaj;
+			}
+			set
+			{
+				if ((this._Sadrzaj != value))
+				{
+					this.OnSadrzajChanging(value);
+					this.SendPropertyChanging();
+					this._Sadrzaj = value;
+					this.SendPropertyChanged("Sadrzaj");
+					this.OnSadrzajChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_", DbType="Int")]
+		public System.Nullable<int> Like_
+		{
+			get
+			{
+				return this._Like_;
+			}
+			set
+			{
+				if ((this._Like_ != value))
+				{
+					this.OnLike_Changing(value);
+					this.SendPropertyChanging();
+					this._Like_ = value;
+					this.SendPropertyChanged("Like_");
+					this.OnLike_Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dislike_", DbType="Int")]
+		public System.Nullable<int> Dislike_
+		{
+			get
+			{
+				return this._Dislike_;
+			}
+			set
+			{
+				if ((this._Dislike_ != value))
+				{
+					this.OnDislike_Changing(value);
+					this.SendPropertyChanging();
+					this._Dislike_ = value;
+					this.SendPropertyChanged("Dislike_");
+					this.OnDislike_Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Datum", DbType="Date NOT NULL")]
+		public System.DateTime Datum
+		{
+			get
+			{
+				return this._Datum;
+			}
+			set
+			{
+				if ((this._Datum != value))
+				{
+					this.OnDatumChanging(value);
+					this.SendPropertyChanging();
+					this._Datum = value;
+					this.SendPropertyChanged("Datum");
+					this.OnDatumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Kategorija_Post", Storage="_Kategorija", ThisKey="KategorijaID", OtherKey="KategorijaID", IsForeignKey=true)]
+		public Kategorija Kategorija
+		{
+			get
+			{
+				return this._Kategorija.Entity;
+			}
+			set
+			{
+				Kategorija previousValue = this._Kategorija.Entity;
+				if (((previousValue != value) 
+							|| (this._Kategorija.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Kategorija.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._Kategorija.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
+						this._KategorijaID = value.KategorijaID;
+					}
+					else
+					{
+						this._KategorijaID = default(int);
+					}
+					this.SendPropertyChanged("Kategorija");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Korisnik_Post", Storage="_Korisnik", ThisKey="KorisnikID", OtherKey="KorisnikID", IsForeignKey=true)]
+		public Korisnik Korisnik
+		{
+			get
+			{
+				return this._Korisnik.Entity;
+			}
+			set
+			{
+				Korisnik previousValue = this._Korisnik.Entity;
+				if (((previousValue != value) 
+							|| (this._Korisnik.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Korisnik.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._Korisnik.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
 						this._KorisnikID = value.KorisnikID;
 					}
 					else
@@ -625,7 +937,7 @@ namespace Comments
 		
 		private int _KorisnikID;
 		
-		private int _Role;
+		private string _Role;
 		
 		private string _Ime;
 		
@@ -641,11 +953,11 @@ namespace Comments
 		
 		private EntitySet<Bookmark> _Bookmarks;
 		
+		private EntitySet<Post> _Posts;
+		
 		private EntitySet<Komentar> _Komentars;
 		
 		private EntitySet<Ocena> _Ocenas;
-		
-		private EntitySet<Post> _Posts;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -653,7 +965,7 @@ namespace Comments
     partial void OnCreated();
     partial void OnKorisnikIDChanging(int value);
     partial void OnKorisnikIDChanged();
-    partial void OnRoleChanging(int value);
+    partial void OnRoleChanging(string value);
     partial void OnRoleChanged();
     partial void OnImeChanging(string value);
     partial void OnImeChanged();
@@ -672,9 +984,9 @@ namespace Comments
 		public Korisnik()
 		{
 			this._Bookmarks = new EntitySet<Bookmark>(new Action<Bookmark>(this.attach_Bookmarks), new Action<Bookmark>(this.detach_Bookmarks));
+			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
 			this._Komentars = new EntitySet<Komentar>(new Action<Komentar>(this.attach_Komentars), new Action<Komentar>(this.detach_Komentars));
 			this._Ocenas = new EntitySet<Ocena>(new Action<Ocena>(this.attach_Ocenas), new Action<Ocena>(this.detach_Ocenas));
-			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
 			OnCreated();
 		}
 		
@@ -698,8 +1010,8 @@ namespace Comments
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="Int NOT NULL")]
-		public int Role
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Role", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Role
 		{
 			get
 			{
@@ -851,6 +1163,19 @@ namespace Comments
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Korisnik_Post", Storage="_Posts", ThisKey="KorisnikID", OtherKey="KorisnikID")]
+		public EntitySet<Post> Posts
+		{
+			get
+			{
+				return this._Posts;
+			}
+			set
+			{
+				this._Posts.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Korisnik_Komentar", Storage="_Komentars", ThisKey="KorisnikID", OtherKey="KorisnikID")]
 		public EntitySet<Komentar> Komentars
 		{
@@ -874,19 +1199,6 @@ namespace Comments
 			set
 			{
 				this._Ocenas.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Korisnik_Post", Storage="_Posts", ThisKey="KorisnikID", OtherKey="KorisnikID")]
-		public EntitySet<Post> Posts
-		{
-			get
-			{
-				return this._Posts;
-			}
-			set
-			{
-				this._Posts.Assign(value);
 			}
 		}
 		
@@ -922,6 +1234,18 @@ namespace Comments
 			entity.Korisnik = null;
 		}
 		
+		private void attach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.Korisnik = this;
+		}
+		
+		private void detach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.Korisnik = null;
+		}
+		
 		private void attach_Komentars(Komentar entity)
 		{
 			this.SendPropertyChanging();
@@ -941,18 +1265,6 @@ namespace Comments
 		}
 		
 		private void detach_Ocenas(Ocena entity)
-		{
-			this.SendPropertyChanging();
-			entity.Korisnik = null;
-		}
-		
-		private void attach_Posts(Post entity)
-		{
-			this.SendPropertyChanging();
-			entity.Korisnik = this;
-		}
-		
-		private void detach_Posts(Post entity)
 		{
 			this.SendPropertyChanging();
 			entity.Korisnik = null;
@@ -1102,318 +1414,6 @@ namespace Comments
 					if ((value != null))
 					{
 						value.Ocenas.Add(this);
-						this._KorisnikID = value.KorisnikID;
-					}
-					else
-					{
-						this._KorisnikID = default(int);
-					}
-					this.SendPropertyChanged("Korisnik");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Post")]
-	public partial class Post : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _PostID;
-		
-		private int _KorisnikID;
-		
-		private int _KategorijaID;
-		
-		private string _Naslov;
-		
-		private string _Sadrzaj;
-		
-		private System.Nullable<int> _Like_;
-		
-		private System.Nullable<int> _Dislike_;
-		
-		private System.DateTime _Datum;
-		
-		private EntityRef<Kategorija> _Kategorija;
-		
-		private EntityRef<Korisnik> _Korisnik;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnPostIDChanging(int value);
-    partial void OnPostIDChanged();
-    partial void OnKorisnikIDChanging(int value);
-    partial void OnKorisnikIDChanged();
-    partial void OnKategorijaIDChanging(int value);
-    partial void OnKategorijaIDChanged();
-    partial void OnNaslovChanging(string value);
-    partial void OnNaslovChanged();
-    partial void OnSadrzajChanging(string value);
-    partial void OnSadrzajChanged();
-    partial void OnLike_Changing(System.Nullable<int> value);
-    partial void OnLike_Changed();
-    partial void OnDislike_Changing(System.Nullable<int> value);
-    partial void OnDislike_Changed();
-    partial void OnDatumChanging(System.DateTime value);
-    partial void OnDatumChanged();
-    #endregion
-		
-		public Post()
-		{
-			this._Kategorija = default(EntityRef<Kategorija>);
-			this._Korisnik = default(EntityRef<Korisnik>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int PostID
-		{
-			get
-			{
-				return this._PostID;
-			}
-			set
-			{
-				if ((this._PostID != value))
-				{
-					this.OnPostIDChanging(value);
-					this.SendPropertyChanging();
-					this._PostID = value;
-					this.SendPropertyChanged("PostID");
-					this.OnPostIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KorisnikID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int KorisnikID
-		{
-			get
-			{
-				return this._KorisnikID;
-			}
-			set
-			{
-				if ((this._KorisnikID != value))
-				{
-					if (this._Korisnik.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnKorisnikIDChanging(value);
-					this.SendPropertyChanging();
-					this._KorisnikID = value;
-					this.SendPropertyChanged("KorisnikID");
-					this.OnKorisnikIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KategorijaID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int KategorijaID
-		{
-			get
-			{
-				return this._KategorijaID;
-			}
-			set
-			{
-				if ((this._KategorijaID != value))
-				{
-					if (this._Kategorija.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnKategorijaIDChanging(value);
-					this.SendPropertyChanging();
-					this._KategorijaID = value;
-					this.SendPropertyChanged("KategorijaID");
-					this.OnKategorijaIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Naslov", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Naslov
-		{
-			get
-			{
-				return this._Naslov;
-			}
-			set
-			{
-				if ((this._Naslov != value))
-				{
-					this.OnNaslovChanging(value);
-					this.SendPropertyChanging();
-					this._Naslov = value;
-					this.SendPropertyChanged("Naslov");
-					this.OnNaslovChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sadrzaj", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string Sadrzaj
-		{
-			get
-			{
-				return this._Sadrzaj;
-			}
-			set
-			{
-				if ((this._Sadrzaj != value))
-				{
-					this.OnSadrzajChanging(value);
-					this.SendPropertyChanging();
-					this._Sadrzaj = value;
-					this.SendPropertyChanged("Sadrzaj");
-					this.OnSadrzajChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_", DbType="Int")]
-		public System.Nullable<int> Like_
-		{
-			get
-			{
-				return this._Like_;
-			}
-			set
-			{
-				if ((this._Like_ != value))
-				{
-					this.OnLike_Changing(value);
-					this.SendPropertyChanging();
-					this._Like_ = value;
-					this.SendPropertyChanged("Like_");
-					this.OnLike_Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dislike_", DbType="Int")]
-		public System.Nullable<int> Dislike_
-		{
-			get
-			{
-				return this._Dislike_;
-			}
-			set
-			{
-				if ((this._Dislike_ != value))
-				{
-					this.OnDislike_Changing(value);
-					this.SendPropertyChanging();
-					this._Dislike_ = value;
-					this.SendPropertyChanged("Dislike_");
-					this.OnDislike_Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Datum", DbType="Date NOT NULL")]
-		public System.DateTime Datum
-		{
-			get
-			{
-				return this._Datum;
-			}
-			set
-			{
-				if ((this._Datum != value))
-				{
-					this.OnDatumChanging(value);
-					this.SendPropertyChanging();
-					this._Datum = value;
-					this.SendPropertyChanged("Datum");
-					this.OnDatumChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Kategorija_Post", Storage="_Kategorija", ThisKey="KategorijaID", OtherKey="KategorijaID", IsForeignKey=true)]
-		public Kategorija Kategorija
-		{
-			get
-			{
-				return this._Kategorija.Entity;
-			}
-			set
-			{
-				Kategorija previousValue = this._Kategorija.Entity;
-				if (((previousValue != value) 
-							|| (this._Kategorija.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Kategorija.Entity = null;
-						previousValue.Posts.Remove(this);
-					}
-					this._Kategorija.Entity = value;
-					if ((value != null))
-					{
-						value.Posts.Add(this);
-						this._KategorijaID = value.KategorijaID;
-					}
-					else
-					{
-						this._KategorijaID = default(int);
-					}
-					this.SendPropertyChanged("Kategorija");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Korisnik_Post", Storage="_Korisnik", ThisKey="KorisnikID", OtherKey="KorisnikID", IsForeignKey=true)]
-		public Korisnik Korisnik
-		{
-			get
-			{
-				return this._Korisnik.Entity;
-			}
-			set
-			{
-				Korisnik previousValue = this._Korisnik.Entity;
-				if (((previousValue != value) 
-							|| (this._Korisnik.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Korisnik.Entity = null;
-						previousValue.Posts.Remove(this);
-					}
-					this._Korisnik.Entity = value;
-					if ((value != null))
-					{
-						value.Posts.Add(this);
 						this._KorisnikID = value.KorisnikID;
 					}
 					else
